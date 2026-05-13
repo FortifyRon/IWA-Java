@@ -46,9 +46,10 @@ jobs:
         uses: fortify/github-action@v3
         env:
           FOD_URL: ${{vars.FOD_URL}}
-          FOD_TENANT: ${{vars.FOD_TENANT}}
+          FOD_TENANT: ${{secrets.FOD_TENANT}}
           FOD_USER: ${{secrets.FOD_USER}}
           FOD_PASSWORD: ${{secrets.FOD_PAT}}
           DO_SCA_SCAN: true
+          DO_POLICY_CHECK: true
           DO_AVIATOR_AUDIT: true
           COPY_FROM_RELEASE: "${{ github.repository }}:${{ github.event.repository.default_branch }}"
