@@ -45,8 +45,8 @@ jobs:
       - name: Run FoD SAST+SCA Scan
         uses: fortify/github-action@v3
         env:
-          FOD_URL: https://ams.fortify.com
-          FOD_TENANT: ${{secrets.FOD_TENANT}}
+          FOD_URL: ${{vars.FOD_URL}}
+          FOD_TENANT: ${{vars.FOD_TENANT}}
           FOD_USER: ${{secrets.FOD_USER}}
           FOD_PASSWORD: ${{secrets.FOD_PAT}}
           DO_SCA_SCAN: true
