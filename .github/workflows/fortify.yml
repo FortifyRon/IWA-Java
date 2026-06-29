@@ -16,9 +16,9 @@ name: Fortify AST Scan
 on:
   workflow_dispatch:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "**" ]
   push:
-    branches: [ "main" ]
+    branches: [ "**" ]
 
 jobs:
   Fortify-AST-Scan:
@@ -49,7 +49,8 @@ jobs:
           FOD_TENANT: ${{secrets.FOD_TENANT}}
           FOD_USER: ${{secrets.FOD_USER}}
           FOD_PASSWORD: ${{secrets.FOD_PAT}}
-          FOD_RELEASE: RDJ-IWA:GitHubAction
+          FOD_RELEASE: RDJ-GH-${{ github.event.repository.name }}:${{ github.event_name == 'pull_request' && format('PR-{0}', github.head_ref) || github.ref_name }}
+          DO_PR_COMMENT: true
           DO_SCA_SCAN: true
           DO_CHECK_POLICY: true
           DO_AVIATOR_AUDIT: true
