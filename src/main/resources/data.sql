@@ -16,6 +16,9 @@ VALUES ('db4cfab1-ff1d-4bca-a662-394771841383', 'user2', '$2a$10$YFhTnHpCL.Z0Ev0
 INSERT INTO users (id, username, password, first_name, last_name, email, phone, address, city, state, zip, country, date_created, gender, enabled)
 VALUES ('92a82f45-7a03-42f3-80f8-ce4e9892409d', 'api', '$2a$10$YFhTnHpCL.Z0Ev0j1CbEUub7sIWmN7Qd5RmnU8g5ekuoapV7Zdx32',
         'Api', 'User', 'api@localhost.com', '0123456789', '1 Somewhere Street', 'London', 'Greater London', 'SW1', 'United Kingdom', CURDATE(), 'Female', 1);
+INSERT INTO users (id, username, password, first_name, last_name, email, phone, address, city, state, zip, country, date_created, gender, enabled)
+VALUES ('f3a7d2e1-9c4b-4f8a-b6e5-2d1c3f5a7b9e', 'user3', '$2a$10$YFhTnHpCL.Z0Ev0j1CbEUub7sIWmN7Qd5RmnU8g5ekuoapV7Zdx32',
+        'Bob', 'Shopper', 'user3@localhost.com', '0123456789', '1 Somewhere Street', 'London', 'Greater London', 'SW1', 'United Kingdom', CURDATE(), 'Male', 1);
 INSERT INTO user_authorities (authority_id, user_id)
 VALUES ('05970e74-c82b-4e21-b100-f8184d6e3454', 'e18c8bcc-935d-444d-a194-3a32a3b35a49');
 INSERT INTO user_authorities (authority_id, user_id)
